@@ -1,0 +1,76 @@
+* {
+    font-family: 'Poppins';
+    font-style: normal;
+  }
+
+#wlcDateGroup{
+    background-color: #CCD5AE;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#trnscRecGroup{
+    background-color: #E9EDC9;
+}
+
+#trnscTodGroup {
+    background-color: #8D7B68;
+}
+
+#newUseGroup{
+    background-color: #A4907C;
+}
+
+#totUseGroup{
+    background-color: #C8B6A6;
+}
+
+#dlyRptGroup{
+    background-color: #FEFAE0;
+}
+
+#mthPmntGroup{
+    background-color: #F1DEC9;
+}
+
+#wlcUserText {
+    width: 720px;
+    height: 95px;
+    left: 100px;
+    padding-left: 20px;
+    padding-top: 50px;
+    flex: 50%;
+
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 16px;
+
+    align-items: center;
+    letter-spacing: 1.5px;
+
+    color: #5B5D69;
+
+    text-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  #dTimeText{
+    width: 290px;
+    height: 70px;
+    Right: 934px;
+    padding-top: 50px;
+    flex: 50%;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 25px;
+
+    align-items: center;
+    text-align: center;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+color: #5B5D69;
+  }
+

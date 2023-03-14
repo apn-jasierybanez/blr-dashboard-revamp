@@ -1,17 +1,134 @@
-<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Website</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
-  </head>
-  <body>
-    <main>
-        <h1>Welcome to My Website</h1>  
-    </main>
-	<script src="index.js"></script>
-  </body>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ced's dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="ced-dashboard.css">
+</head>
+<body>
+    <div class="content">
+
+        <div class="row">
+
+            <div class="col-8">
+                <div class="row" id="wlcDateGroup">
+                    <div class="col-6">
+                        <p id="wlcUserText">WELCOME, USER</p>
+                    </div>
+                    <div class="col-6">
+                        <p id="dTimeText">WED, MAR 8 2023<br>
+                            12:00:00 PM
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4" id="trnscTodGroup">
+                        <p>Transactions Today</p><br>
+                        <p>1,000,000 (icon)10%</p>
+                    </div>
+                    <div class="col-4" id="newUseGroup">
+                        <p>New User Today</p><br>
+                        <p>1,000,000 (icon)10%</p>
+                    </div>
+                    <div class="col-4" id="totUseGroup">
+                        <p>Total User</p><br>
+                        <p>1,000,000 Users</p>
+                    </div>
+                </div>
+                <div class="row" id="dlyRptGroup">
+                    <div class="col-3">
+                        <p>Daily<br>Report</p>
+                        <p>Financial Record Overview</p>
+                        <button type="button" class="btn btn-success">Success</button>
+                    </div>
+                    <div class="col-5">
+                        <div class="row">
+                            <div class="col-8">
+                                <p>Donut Chart 1</p>
+                            </div>
+                            <div class="col-4">
+                                <p>24 HRS $520,000</p>
+                                <p>7 DYS $1,300,000</p>
+                                <p>30 DYS $7,820,000</p>
+                                <p>6 MOS $45,239,910</p>
+                                <p>1 YR $136,990,182</p>
+                                <p>Custom</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <p>Donut Chart 2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4" id="trnscRecGroup">
+
+                <div class="row">
+                    <div class="col-6">
+                        <p>Transaction Records</p>
+                    </div>
+                    <div class="col-6">
+                        <div class="dropdown">
+                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              WEEKLY
+                            </a>
+                          
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">TODAY(24H)</a></li>
+                              <li><a class="dropdown-item" href="#">WEEKLY</a></li>
+                              <li><a class="dropdown-item" href="#">MONTHLY</a></li>
+                              <li><a class="dropdown-item" href="#">YEARLY</a></li>
+                              <li><a class="dropdown-item" href="#">CUSTOM RANGE</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <p>Bar Graph 1</p>
+                <p>(icon) This Week          (icon) Last Week </p>
+            </div>
+
+        </div>
+
+        <div class="row" id="mthPmntGroup">
+
+            <div class="row">
+                <div class="col-6">
+                    <p>Method of Payment Used</p>
+                </div>
+                <div class="col-6">
+                    <div class="dropdown">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          WEEKLY
+                        </a>
+                      
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">TODAY(24H)</a></li>
+                          <li><a class="dropdown-item" href="#">WEEKLY</a></li>
+                          <li><a class="dropdown-item" href="#">MONTHLY</a></li>
+                          <li><a class="dropdown-item" href="#">YEARLY</a></li>
+                          <li><a class="dropdown-item" href="#">CUSTOM RANGE</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+ 
+            <div class="col-8">
+                <p>Bar Graph 2</p>
+            </div>
+            <div class="col-4">
+                <p>Donut Chart 3</p>
+                <p>Payment Posted (icon)</p>
+                <p>Payment Pending (icon)</p>
+                <p>Payment Failed (icon)</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    
+</body>
 </html>
