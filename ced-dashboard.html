@@ -8,120 +8,156 @@
     <link rel="stylesheet" href="ced-dashboard.css">
 </head>
 <body>
-    <div class="content">
+    <div class="content gap">
 
         <div class="row">
 
-            <div class="col-8">
-                <div class="row" id="wlcDateGroup">
-                    <div class="col-6">
+            <div class="col-lg-8 col-sm-12"> <!--Divides Transaction Records and it's left side-->
+
+                <div class="row" id="wlcDateGroup"> <!--Upper Left Text-->
+                    <div class="col-lg-6 col-sm-12">
                         <p id="wlcUserText">WELCOME, USER</p>
                     </div>
-                    <div class="col-6">
+                    <div class="col-lg-6 col-sm-12">
                         <p id="dTimeText">WED, MAR 8 2023<br>
                             12:00:00 PM
                         </p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-4" id="trnscTodGroup">
-                        <p>Transactions Today</p><br>
-                        <p>1,000,000 (icon)10%</p>
-                    </div>
-                    <div class="col-4" id="newUseGroup">
-                        <p>New User Today</p><br>
-                        <p>1,000,000 (icon)10%</p>
-                    </div>
-                    <div class="col-4" id="totUseGroup">
-                        <p>Total User</p><br>
-                        <p>1,000,000 Users</p>
-                    </div>
-                </div>
-                <div class="row" id="dlyRptGroup">
-                    <div class="col-3">
-                        <p>Daily<br>Report</p>
-                        <p>Financial Record Overview</p>
-                        <button type="button" class="btn btn-success">Success</button>
-                    </div>
-                    <div class="col-5">
-                        <div class="row">
-                            <div class="col-8">
-                                <p>Donut Chart 1</p>
-                            </div>
-                            <div class="col-4">
-                                <p>24 HRS $520,000</p>
-                                <p>7 DYS $1,300,000</p>
-                                <p>30 DYS $7,820,000</p>
-                                <p>6 MOS $45,239,910</p>
-                                <p>1 YR $136,990,182</p>
-                                <p>Custom</p>
+                <div class="row"> <!--Triple Card Today Reports-->
+                    <div class="col-lg-4 col-sm-12" id="trnscTodGroup"> 
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                              <p class="card-title">Transactions Today</p>
+                              <h5 class="card-text">1,000,000 (icon)10%</h5>
                             </div>
                         </div>
                     </div>
-                    <div class="col-4">
-                        <p>Donut Chart 2</p>
+                    <div class="col-lg-4 col-sm-12" id="newUseGroup">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                              <p class="card-title">New User Today</p>
+                              <h5 class="card-text">1,000,000 (icon)10%</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-12" id="totUseGroup">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                              <p class="card-title">Total User</p>
+                              <h5 class="card-text">1,000,000 Users</h5>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-4" id="trnscRecGroup">
 
-                <div class="row">
-                    <div class="col-6">
-                        <p>Transaction Records</p>
-                    </div>
-                    <div class="col-6">
-                        <div class="dropdown">
-                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              WEEKLY
-                            </a>
-                          
-                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="#">TODAY(24H)</a></li>
-                              <li><a class="dropdown-item" href="#">WEEKLY</a></li>
-                              <li><a class="dropdown-item" href="#">MONTHLY</a></li>
-                              <li><a class="dropdown-item" href="#">YEARLY</a></li>
-                              <li><a class="dropdown-item" href="#">CUSTOM RANGE</a></li>
-                            </ul>
+                <div class="row" id="dlyRptGroup"> <!--Daily Report Row-->
+                    <div class="card g-3" style="width: 86rem;"> <!--ASK why is gutter so weird not working horizontally(x-axis)-->
+                        <div class="card-body">
+                            <div class="row"> 
+                                <div class="col-lg-3 col-sm-12">
+                                    <p>Daily<br>Report</p>
+                                    <p>Financial Record Overview</p>
+                                    <button type="button" class="btn btn-success">Success</button>
+                                </div>
+                                <div class="col-lg-5 col-sm-12">
+                                    <div class="row">
+                                        <div class="col-lg-8 col-sm-12">
+                                            <p>Donut Chart 1</p>
+                                        </div>
+                                        <div class="col-lg-4 col-sm-12">
+                                            <p>24 HRS $520,000</p>
+                                            <p>7 DYS $1,300,000</p>
+                                            <p>30 DYS $7,820,000</p>
+                                            <p>6 MOS $45,239,910</p>
+                                            <p>1 YR $136,990,182</p>
+                                            <p>Custom</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-sm-12">
+                                    <p>Donut Chart 2</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <p>Bar Graph 1</p>
-                <p>(icon) This Week          (icon) Last Week </p>
+
+            </div> 
+
+            <div class="col-lg-4 col-sm-12" id="trnscRecGroup"> <!--Divides Transaction Records and it's left side-->
+
+                <div class="card" style="width: 38.5rem; height: 27.8rem;"> <!--Transaction Records-->
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-6">
+                                <p>Transaction Records</p>
+                            </div>
+                            <div class="col-lg-6 col-sm-6">
+                                <div class="dropdown">
+                                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      WEEKLY
+                                    </a>
+                                  
+                                    <ul class="dropdown-menu">
+                                      <li><a class="dropdown-item" href="#">TODAY(24H)</a></li>
+                                      <li><a class="dropdown-item" href="#">WEEKLY</a></li>
+                                      <li><a class="dropdown-item" href="#">MONTHLY</a></li>
+                                      <li><a class="dropdown-item" href="#">YEARLY</a></li>
+                                      <li><a class="dropdown-item" href="#">CUSTOM RANGE</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <p>Bar Graph 1</p>
+                        <p>(icon) This Week          (icon) Last Week </p>
+                    </div>
+                </div>
+                
             </div>
 
         </div>
 
-        <div class="row" id="mthPmntGroup">
-
-            <div class="row">
-                <div class="col-6">
-                    <p>Method of Payment Used</p>
-                </div>
-                <div class="col-6">
-                    <div class="dropdown">
-                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          WEEKLY
-                        </a>
-                      
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">TODAY(24H)</a></li>
-                          <li><a class="dropdown-item" href="#">WEEKLY</a></li>
-                          <li><a class="dropdown-item" href="#">MONTHLY</a></li>
-                          <li><a class="dropdown-item" href="#">YEARLY</a></li>
-                          <li><a class="dropdown-item" href="#">CUSTOM RANGE</a></li>
-                        </ul>
+        <div class="row" id="mthPmntGroup"> <!--Whole Method of Payment Row-->
+            
+            <div class="card gy-3" style="width: 120.3rem;">
+                <div class="card-body">
+        
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-6">
+                            <p>Method of Payment Used</p>
+                        </div>
+                        <div class="col-lg-6 col-sm-6">
+                            <div class="dropdown">
+                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  WEEKLY
+                                </a>
+                              
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="#">TODAY(24H)</a></li>
+                                  <li><a class="dropdown-item" href="#">WEEKLY</a></li>
+                                  <li><a class="dropdown-item" href="#">MONTHLY</a></li>
+                                  <li><a class="dropdown-item" href="#">YEARLY</a></li>
+                                  <li><a class="dropdown-item" href="#">CUSTOM RANGE</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
+         
+                    <div class="row">
+                        <div class="col-lg-8 col-sm-12">
+                            <p>Bar Graph 2</p>
+                        </div>
+                        <div class="col-lg-4 col-sm-12">
+                            <p>Donut Chart 3</p>
+                            <p>Payment Posted (icon)</p>
+                            <p>Payment Pending (icon)</p>
+                            <p>Payment Failed (icon)</p>
+                        </div>
+    
+                    </div>
+
                 </div>
-            </div>
- 
-            <div class="col-8">
-                <p>Bar Graph 2</p>
-            </div>
-            <div class="col-4">
-                <p>Donut Chart 3</p>
-                <p>Payment Posted (icon)</p>
-                <p>Payment Pending (icon)</p>
-                <p>Payment Failed (icon)</p>
             </div>
 
         </div>
