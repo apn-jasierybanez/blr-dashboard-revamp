@@ -8,97 +8,147 @@
     <link rel="stylesheet" href="ced-dashboard.css">
 </head>
 <body>
-    <div class="content gap">
+
+    <div class="container-fluid">
 
         <div class="row">
 
             <div class="col-lg-8 col-sm-12"> <!--Divides Transaction Records and it's left side-->
 
-                <div class="row" id="wlcDateGroup"> <!--Upper Left Text-->
-                    <div class="col-lg-6 col-sm-12">
-                        <p id="wlcUserText">WELCOME, USER</p>
+                <div class="row g-1"> <!--Upper Left Text-->
+                    <div class="col-lg-6 col-sm-6 text-start fs-1 fw-bolder text-uppercase py-3 px-3">
+                        <p>welcome, user</p>
                     </div>
-                    <div class="col-lg-6 col-sm-12">
-                        <p id="dTimeText">WED, MAR 8 2023<br>
-                            12:00:00 PM
+                    <div class="col-lg-6 col-sm-6 text-end fs-4 fw-bold text-uppercase py-3 px-4">
+                        <p>wed, mar 8 2023<br>
+                            12:00:00 pm
                         </p>
                     </div>
                 </div>
-                <div class="row"> <!--Triple Card Today Reports-->
-                    <div class="col-lg-4 col-sm-12" id="trnscTodGroup"> 
-                        <div class="card" style="width: 18rem;">
+                <div class="row g-3"> <!--Triple Card Today Reports-->
+                    <div class="col-lg-4 col-sm-12 py-1"> 
+                        <div class="card border border-success shadow">
                             <div class="card-body">
-                              <p class="card-title">Transactions Today</p>
-                              <h5 class="card-text">1,000,000 (icon)10%</h5>
+                              <p class="card-title fs-5">Transactions Today</p>
+                              <h5 class="card-text fs-3 fw-semibold">1,000,000 (icon)10%</h5>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-12" id="newUseGroup">
-                        <div class="card" style="width: 18rem;">
+                    <div class="col-lg-4 col-sm-12 py-1">
+                        <div class="card border-success shadow">
                             <div class="card-body">
-                              <p class="card-title">New User Today</p>
-                              <h5 class="card-text">1,000,000 (icon)10%</h5>
+                              <p class="card-title fs-5">New User Today</p>
+                              <h5 class="card-text fs-3 fw-semibold">1,000,000 (icon)10%</h5>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-12" id="totUseGroup">
-                        <div class="card" style="width: 18rem;">
+                    <div class="col-lg-4 col-sm-12 py-1">
+                        <div class="card border-success shadow">
                             <div class="card-body">
-                              <p class="card-title">Total User</p>
-                              <h5 class="card-text">1,000,000 Users</h5>
+                              <p class="card-title fs-5">Total User</p>
+                              <h5 class="card-text fs-3 fw-semibold">1,000,000 Users</h5>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="row" id="dlyRptGroup"> <!--Daily Report Row-->
-                    <div class="card g-3" style="width: 86rem;"> <!--ASK why is gutter so weird not working horizontally(x-axis)-->
-                        <div class="card-body">
-                            <div class="row"> 
-                                <div class="col-lg-3 col-sm-12">
-                                    <p>Daily<br>Report</p>
-                                    <p>Financial Record Overview</p>
-                                    <button type="button" class="btn btn-success">Success</button>
-                                </div>
-                                <div class="col-lg-5 col-sm-12">
-                                    <div class="row">
-                                        <div class="col-lg-8 col-sm-12">
-                                            <p>Donut Chart 1</p>
-                                        </div>
-                                        <div class="col-lg-4 col-sm-12">
-                                            <p>24 HRS $520,000</p>
-                                            <p>7 DYS $1,300,000</p>
-                                            <p>30 DYS $7,820,000</p>
-                                            <p>6 MOS $45,239,910</p>
-                                            <p>1 YR $136,990,182</p>
-                                            <p>Custom</p>
+                <div class="row g-3"> <!--Daily Report Row-->
+                    <div class="col-sm-12 py-3">
+
+                        <div class="card border-success shadow">
+                            <div class="card-body">
+                                <div class="row"> 
+                                    <div class="col-lg-3 col-sm-12">
+                                        <p class="fs-1 fw-bolder text-uppercase">daily<br>report</p>
+                                        <p class="fw-semibold text-uppercase">financial record overview</p>
+                                        <button type="button" class="btn btn-success">EXPORT<img src="downloadlogo.png" class="img-fluid"></button>
+                                    </div>
+                                    <div class="col-lg-5 col-sm-12">
+                                        <div class="row">
+                                            <div class="col-lg-8 col-sm-12">
+                                                <p>Donut Chart 1</p>
+                                            </div>
+                                            <div class="col-lg-4 col-sm-12">
+                                                <p>24 HRS $520,000</p>
+                                                <p>7 DYS $1,300,000</p>
+                                                <p>30 DYS $7,820,000</p>
+                                                <p>6 MOS $45,239,910</p>
+                                                <p>1 YR $136,990,182</p>
+                                                <div class="dropdown"> <!-- JUST COPIED FROM BS-->
+                                                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                      custom
+                                                    </a>
+                                                    <ul class="dropdown-menu">
+                                                      <li><a class="dropdown-item" href="#">DATE RANGE</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-lg-4 col-sm-12">
-                                    <p>Donut Chart 2</p>
+                                    <div class="col-lg-4 col-sm-12">
+                                        <p>Donut Chart 2</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
 
             </div> 
 
-            <div class="col-lg-4 col-sm-12" id="trnscRecGroup"> <!--Divides Transaction Records and it's left side-->
+            <div class="col-lg-4 col-sm-12"> <!--Divides Transaction Records and it's left side-->
 
-                <div class="card" style="width: 38.5rem; height: 27.8rem;"> <!--Transaction Records-->
+                <div class="row g-3">
+                    <div class="col py-3">
+                        <div class="card border-success shadow"> <!--Transaction Records-->
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-6 col-sm-6 fs-4 fw-semibold">
+                                        <p>Transaction Records</p>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-6">
+                                        <div class="dropdown text-end"> <!-- JUST COPIED FROM BS-->
+                                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                              WEEKLY
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                              <li><a class="dropdown-item" href="#">TODAY(24H)</a></li>
+                                              <li><a class="dropdown-item" href="#">WEEKLY</a></li>
+                                              <li><a class="dropdown-item" href="#">MONTHLY</a></li>
+                                              <li><a class="dropdown-item" href="#">YEARLY</a></li>
+                                              <li><a class="dropdown-item" href="#">CUSTOM RANGE</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>Bar Graph 1</p>
+                                <p class="text-center text-uppercase"><img src="comparisonalogo.png" class="img-fluid"> this week <img src="comparisonblogo.png" class="img-fluid"> last week </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+        <div class="row"> <!--Whole Method of Payment Row-->
+            
+            <div class="col">
+
+                <div class="card border-success shadow-lg">
                     <div class="card-body">
+            
                         <div class="row">
-                            <div class="col-lg-6 col-sm-6">
-                                <p>Transaction Records</p>
+                            <div class="col-lg-6 col-sm-6 fs-4 fw-semibold">
+                                <p>Method of Payment Used</p>
                             </div>
                             <div class="col-lg-6 col-sm-6">
-                                <div class="dropdown">
+                                <div class="dropdown text-end"> <!-- JUST COPIED FROM BS-->
                                     <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                       WEEKLY
                                     </a>
-                                  
                                     <ul class="dropdown-menu">
                                       <li><a class="dropdown-item" href="#">TODAY(24H)</a></li>
                                       <li><a class="dropdown-item" href="#">WEEKLY</a></li>
@@ -109,59 +159,27 @@
                                 </div>
                             </div>
                         </div>
-                        <p>Bar Graph 1</p>
-                        <p>(icon) This Week          (icon) Last Week </p>
-                    </div>
-                </div>
-                
-            </div>
-
-        </div>
-
-        <div class="row" id="mthPmntGroup"> <!--Whole Method of Payment Row-->
-            
-            <div class="card gy-3" style="width: 120.3rem;">
-                <div class="card-body">
-        
-                    <div class="row">
-                        <div class="col-lg-6 col-sm-6">
-                            <p>Method of Payment Used</p>
-                        </div>
-                        <div class="col-lg-6 col-sm-6">
-                            <div class="dropdown">
-                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                  WEEKLY
-                                </a>
-                              
-                                <ul class="dropdown-menu">
-                                  <li><a class="dropdown-item" href="#">TODAY(24H)</a></li>
-                                  <li><a class="dropdown-item" href="#">WEEKLY</a></li>
-                                  <li><a class="dropdown-item" href="#">MONTHLY</a></li>
-                                  <li><a class="dropdown-item" href="#">YEARLY</a></li>
-                                  <li><a class="dropdown-item" href="#">CUSTOM RANGE</a></li>
-                                </ul>
+             
+                        <div class="row">
+                            <div class="col-lg-8 col-sm-12">
+                                <p>Bar Graph 2</p>
                             </div>
-                        </div>
-                    </div>
-         
-                    <div class="row">
-                        <div class="col-lg-8 col-sm-12">
-                            <p>Bar Graph 2</p>
-                        </div>
-                        <div class="col-lg-4 col-sm-12">
-                            <p>Donut Chart 3</p>
-                            <p>Payment Posted (icon)</p>
-                            <p>Payment Pending (icon)</p>
-                            <p>Payment Failed (icon)</p>
+                            <div class="col-lg-4 col-sm-12">
+                                <p>Donut Chart 3</p>
+                                <p><img src="paymentpostedlogo.png" class="img-fluid"> Payment Posted</p>
+                                <p><img src="paymentpendinglogo.png" class="img-fluid"> Payment Pending</p>
+                                <p><img src="paymentfailedlogo.png" class="img-fluid"> Payment Failed</p>
+                            </div>
+        
                         </div>
     
                     </div>
-
                 </div>
+
             </div>
 
         </div>
-
+    
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
