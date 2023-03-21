@@ -6,6 +6,8 @@
     <title>Ced's dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="ced-dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"> <!-- UPDATE-->
+
 </head>
 <body>
 
@@ -14,10 +16,9 @@
         <div class="row">
 
             <div class="col-lg-8 col-sm-12"> <!--Divides Transaction Records and it's left side-->
-
                 <div class="row g-1"> <!--Upper Left Text-->
                     <div class="col-lg-6 col-sm-6 text-start fs-1 fw-bolder text-uppercase py-3 px-3">
-                        <p>welcome, user</p>
+                        <p><strong>welcome, user</strong></p>
                     </div>
                     <div class="col-lg-6 col-sm-6 text-end fs-4 fw-bold text-uppercase py-3 px-4">
                         <p>wed, mar 8 2023<br>
@@ -26,24 +27,24 @@
                     </div>
                 </div>
                 <div class="row g-3"> <!--Triple Card Today Reports-->
-                    <div class="col-lg-4 col-sm-12 py-1"> 
-                        <div class="card border border-success shadow">
+                    <div class="col-lg-4 col-sm-12 py-1">
+                        <div class="blrCard card border shadow">
                             <div class="card-body">
-                              <p class="card-title fs-5">Transactions Today</p>
-                              <h5 class="card-text fs-3 fw-semibold">1,000,000 (icon)10%</h5>
+                                <p class="card-title fs-5">Transactions Today</p>
+                                <h5 class="card-text fs-3 fw-semibold">1,000,000 <i class="increaseLogo fa-solid fa-arrow-trend-up"></i> 10%</h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-12 py-1">
-                        <div class="card border-success shadow">
+                        <div class="blrCard card border shadow">
                             <div class="card-body">
-                              <p class="card-title fs-5">New User Today</p>
-                              <h5 class="card-text fs-3 fw-semibold">1,000,000 (icon)10%</h5>
+                              <p class="card-title fs-5">New Users Today</p>
+                              <h5 class="card-text fs-3 fw-semibold">1,000,000 <i class="increaseLogo fa-solid fa-arrow-trend-up"></i> 10%</h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-12 py-1">
-                        <div class="card border-success shadow">
+                        <div class="blrCard card border shadow">
                             <div class="card-body">
                               <p class="card-title fs-5">Total User</p>
                               <h5 class="card-text fs-3 fw-semibold">1,000,000 Users</h5>
@@ -55,27 +56,29 @@
                 <div class="row g-3"> <!--Daily Report Row-->
                     <div class="col-sm-12 py-3">
 
-                        <div class="card border-success shadow">
+                        <div class="blrCard card border shadow">
                             <div class="card-body">
                                 <div class="row"> 
                                     <div class="col-lg-3 col-sm-12">
-                                        <p class="fs-1 fw-bolder text-uppercase">daily<br>report</p>
+                                        <strong><p class="fs-1 fw-bolder text-uppercase">daily<br>report</p></strong>
                                         <p class="fw-semibold text-uppercase">financial record overview</p>
-                                        <button type="button" class="btn btn-success">EXPORT<img src="downloadlogo.png" class="img-fluid"></button>
+
+                                        <button type="button" class="btn btn-outline-success fw-bold">EXPORT <i class="exportButtonIcon fa fa-arrow-down"></i></button>
                                     </div>
                                     <div class="col-lg-5 col-sm-12">
                                         <div class="row">
                                             <div class="col-lg-8 col-sm-12">
-                                                <p>Donut Chart 1</p>
+                                                <div class="polarAreaChartBox"><canvas id="polarAreaChart"></canvas></div>
                                             </div>
                                             <div class="col-lg-4 col-sm-12">
-                                                <p>24 HRS $520,000</p>
-                                                <p>7 DYS $1,300,000</p>
-                                                <p>30 DYS $7,820,000</p>
-                                                <p>6 MOS $45,239,910</p>
-                                                <p>1 YR $136,990,182</p>
+                                                
+                                                <p><span class="badge text-bg-dailyText">24 HRS</span> <small>$520,000</small></p>
+                                                <p><span class="badge text-bg-weeklyText">7 DYS</span> <small>$1,300,000</small></p>
+                                                <p><span class="badge text-bg-monthlyText">30 DYS</span> <small>$7,820,000</small></p>
+                                                <p><span class="badge text-bg-halfyearText">6 MOS</span> <small>$45,239,910</small></p>
+                                                <p><span class="badge text-bg-yearlyText">1 YR</span> <small>$136,990,182</small></p>
                                                 <div class="dropdown"> <!-- JUST COPIED FROM BS-->
-                                                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <a class="btn btn-customBtn dropdown-toggle text-uppercase fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                       custom
                                                     </a>
                                                     <ul class="dropdown-menu">
@@ -86,7 +89,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-sm-12">
-                                        <p>Donut Chart 2</p>
+                                        <div><canvas id="doughnutChart"><p class="z-3 text-center">3.39% of all transactions</p></canvas></div>
                                     </div>
                                 </div>
                             </div>
@@ -97,11 +100,11 @@
 
             </div> 
 
-            <div class="col-lg-4 col-sm-12"> <!--Divides Transaction Records and it's left side-->
+            <div class="col-lg-4 col-sm-12 h-100"> <!--Divides Transaction Records and it's left side-->
 
                 <div class="row g-3">
                     <div class="col py-3">
-                        <div class="card border-success shadow"> <!--Transaction Records-->
+                        <div class="blrCard card border shadow"> <!--Transaction Records-->
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-lg-6 col-sm-6 fs-4 fw-semibold">
@@ -109,7 +112,7 @@
                                     </div>
                                     <div class="col-lg-6 col-sm-6">
                                         <div class="dropdown text-end"> <!-- JUST COPIED FROM BS-->
-                                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <a class="btn btn-dateRange dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                               WEEKLY
                                             </a>
                                             <ul class="dropdown-menu">
@@ -122,8 +125,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <p>Bar Graph 1</p>
-                                <p class="text-center text-uppercase"><img src="comparisonalogo.png" class="img-fluid"> this week <img src="comparisonblogo.png" class="img-fluid"> last week </p>
+                                <div class="transacBarGraphBox"><canvas id="transacBarGraph"></canvas></div>
                             </div>
                         </div>
                     </div>
@@ -137,7 +139,7 @@
             
             <div class="col">
 
-                <div class="card border-success shadow-lg">
+                <div class="blrCard card border shadow-lg">
                     <div class="card-body">
             
                         <div class="row">
@@ -146,7 +148,7 @@
                             </div>
                             <div class="col-lg-6 col-sm-6">
                                 <div class="dropdown text-end"> <!-- JUST COPIED FROM BS-->
-                                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <a class="btn btn-dateRange dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                       WEEKLY
                                     </a>
                                     <ul class="dropdown-menu">
@@ -161,14 +163,14 @@
                         </div>
              
                         <div class="row">
-                            <div class="col-lg-8 col-sm-12">
-                                <p>Bar Graph 2</p>
+                            <div class="col-lg-9 col-sm-12">
+                                <div class="transacBarGraphBoxY"><canvas id="transacBarGraphYaxis"></canvas></div>
                             </div>
-                            <div class="col-lg-4 col-sm-12">
-                                <p>Donut Chart 3</p>
-                                <p><img src="paymentpostedlogo.png" class="img-fluid"> Payment Posted</p>
-                                <p><img src="paymentpendinglogo.png" class="img-fluid"> Payment Pending</p>
-                                <p><img src="paymentfailedlogo.png" class="img-fluid"> Payment Failed</p>
+                            <div class="col-lg-3 col-sm-12 g-1">
+                                <div class = "doughnutChartStatusBox py-4 "><canvas id="doughnutChartStatus"></canvas></div>
+                                <p><i class="paymentPosted fa-solid fa-circle px-4"></i> Payment Posted      (54)</p>
+                                <p><i class="paymentPending fa-solid fa-circle px-4""></i> Payment Pending    (20)</p>
+                                <p><i class="paymentFailed fa-solid fa-circle px-4""></i> Payment Failed      (26)</p>
                             </div>
         
                         </div>
@@ -179,10 +181,150 @@
             </div>
 
         </div>
+
+        
     
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+
+        const polarAreaChart = document.getElementById('polarAreaChart');
+        new Chart(polarAreaChart, {
+            type: 'polarArea',
+            data: {
+                label: 'Income', 
+                datasets: [{
+                    data: ['25', '50', '75', '100', '125'],
+                    backgroundColor: ['#ACC9CA', '#EBBC02', '#87C159', '#FCE1A1', '#058240']
+                }]
+            }
+        });
+
+        const doughnutChart = document.getElementById('doughnutChart');
+        new Chart(doughnutChart, {
+            type: 'doughnut',
+            data: {
+                labels: ["24 HRS", "Total Transactions"],
+                datasets: [{
+                    data: [50, 125],
+                    backgroundColor: ['#ACC9CA', '#9CCF73']
+                }],
+            },
+            options: {
+                maintainAspectRatio: false,
+                tooltips: {
+                backgroundColor: "rgb(255,255,255)",
+                bodyFontColor: "#858796",
+                borderColor: '#dddfeb',
+                borderWidth: 2,
+                xPadding: 15,
+                yPadding: 15,
+                displayColors: false,
+                caretPadding: 10,
+                },
+                legend: {
+                display: false
+                },
+                cutoutPercentage: 80,
+            }
+        });
+
+        /* 
+         type: 'doughnut',
+            data: {
+                label: 'Income', 
+                datasets: [{
+                    data: ['25', '125'],
+                    backgroundColor: ['#ACC9CA', '#9CCF73']
+                }]
+            }
+        */
+
+        const transacBarGraph = document.getElementById('transacBarGraph');
+        new Chart(transacBarGraph, {
+            type: 'bar',
+            data: {
+                labels: ['US', 'RUSSIA', 'UKRAINE', 'INDIA'],
+                datasets: [
+                    {
+                        label: 'No. of transactions this week',
+                        data: ['50', '10', '15', '26'],
+                        backgroundColor: '#39C86A',
+                        borderRadius: 5,
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'No. of transaction last week',
+                        data: ['100', '20', '25', '36'],
+                        backgroundColor: '#B8E6C8',
+                        borderRadius: 5,
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                maintainAspectRatio: false
+            }
+        });
+
+        const transacBarGraphYaxis = document.getElementById('transacBarGraphYaxis');
+        new Chart(transacBarGraphYaxis, {
+            type: 'bar',
+            data: {
+                labels: ['VISA', 'MasterCard', 'MLhuillier Pay', 'Gcash', 'Paymaya', 'Others', 'Others', 'Others'],
+                datasets: [{
+                    axis: 'y',
+                    label: 'No. of transactions',
+                    data: ['149', '99', '79', '65', '25', '20', '15', '10'],
+                    fill: false,
+                    backgroundColor: '#39C86A',
+                    borderRadius: 5,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                indexAxis: 'y',
+                scales: {
+                    xAxes: [{
+                        barThickness: 20,  // number (pixels) or 'flex'
+                    }]
+                }
+            }
+        });
+
+        const doughnutChartStatus = document.getElementById('doughnutChartStatus');
+        new Chart(doughnutChartStatus, {
+            type: 'doughnut',
+            data: {
+                labels: ["Posted", "Pending", "Failed"],
+                datasets: [{
+                data: [54, 20, 26],
+                backgroundColor: ['#139650', '#E74A3B', '#F6C23E']
+                }],
+            },
+            options: {
+                tooltips: {
+                backgroundColor: "rgb(255,255,255)",
+                bodyFontColor: "#858796",
+                borderColor: '#dddfeb',
+                borderWidth: 2,
+                xPadding: 15,
+                yPadding: 15,
+                displayColors: false,
+                caretPadding: 10,
+                },
+                legend: {
+                display: false
+                },
+                cutoutPercentage: 80,
+            }
+        });
+
+    </script>
+
 </body>
 </html>
