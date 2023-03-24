@@ -6,7 +6,7 @@
     <title>Ced's dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="ced-dashboard.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"> <!-- UPDATE-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 
 </head>
 <body>
@@ -62,34 +62,24 @@
                                     <div class="col-lg-3 col-sm-12">
                                         <strong><p class="fs-1 fw-bolder text-uppercase">daily<br>report</p></strong>
                                         <p class="fw-semibold text-uppercase">financial record overview</p>
-
                                         <button type="button" class="btn btn-outline-success fw-bold">EXPORT <i class="exportButtonIcon fa fa-arrow-down"></i></button>
                                     </div>
-                                    <div class="col-lg-5 col-sm-12">
-                                        <div class="row">
+                                    <div class="col-lg-9 col-sm-12 g-1">
+                                        <div class="row justify-content-center text-uppercase py-2">
                                             <div class="col-lg-8 col-sm-12">
-                                                <div class="polarAreaChartBox"><canvas id="polarAreaChart"></canvas></div>
+                                                <div class="dailyReportChartBox"><canvas id="dailyReportChart"></canvas></div>
                                             </div>
-                                            <div class="col-lg-4 col-sm-12">
-                                                
-                                                <p><span class="badge text-bg-dailyText">24 HRS</span> <small>$520,000</small></p>
-                                                <p><span class="badge text-bg-weeklyText">7 DYS</span> <small>$1,300,000</small></p>
-                                                <p><span class="badge text-bg-monthlyText">30 DYS</span> <small>$7,820,000</small></p>
-                                                <p><span class="badge text-bg-halfyearText">6 MOS</span> <small>$45,239,910</small></p>
-                                                <p><span class="badge text-bg-yearlyText">1 YR</span> <small>$136,990,182</small></p>
-                                                <div class="dropdown"> <!-- JUST COPIED FROM BS-->
-                                                    <a class="btn btn-customBtn dropdown-toggle text-uppercase fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                      custom
-                                                    </a>
-                                                    <ul class="dropdown-menu">
-                                                      <li><a class="dropdown-item" href="#">DATE RANGE</a></li>
-                                                    </ul>
+                                            <div class="col-lg-4 col-sm-6 py-4">
+                                                <h6><strong>volume generated: </strong></h6>
+                                                <div class="list-group">
+                                                    <button id="dailyButton" type="button" class="list-group-item list-group-item-action"><span class="badge text-bg-dailyText">24 HRS</span> <small>₱ 1,000</small></button>
+                                                    <button id="weeklyButton" type="button" class="list-group-item list-group-item-action"><span class="badge text-bg-weeklyText">7 DAYS</span> <small>₱ 7,000</small></button>
+                                                    <button id="monthlyButton" type="button" class="list-group-item list-group-item-action"><span class="badge text-bg-monthlyText">30 DYS</span> <small>₱ 30,000</small></button>
+                                                    <button id="halfMonthButton" type="button" class="list-group-item list-group-item-action"><span class="badge text-bg-halfyearText">6 MOS.</span> <small>₱ 150,000</small></button>
+                                                    <button id="yearlyButton" type="button" class="list-group-item list-group-item-action"><span class="badge text-bg-yearlyText">1 YEAR</span> <small>₱ 300,000</small></button>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-4 col-sm-12">
-                                        <div><canvas id="doughnutChart"><p class="z-3 text-center">3.39% of all transactions</p></canvas></div>
                                     </div>
                                 </div>
                             </div>
@@ -111,7 +101,7 @@
                                         <p>Transaction Records</p>
                                     </div>
                                     <div class="col-lg-6 col-sm-6">
-                                        <div class="dropdown text-end"> <!-- JUST COPIED FROM BS-->
+                                        <div class="dropdown text-end">
                                             <a class="btn btn-dateRange dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                               WEEKLY
                                             </a>
@@ -147,7 +137,7 @@
                                 <p>Method of Payment Used</p>
                             </div>
                             <div class="col-lg-6 col-sm-6">
-                                <div class="dropdown text-end"> <!-- JUST COPIED FROM BS-->
+                                <div class="dropdown text-end">
                                     <a class="btn btn-dateRange dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                       WEEKLY
                                     </a>
@@ -163,14 +153,21 @@
                         </div>
              
                         <div class="row">
-                            <div class="col-lg-9 col-sm-12">
+                            <div class="col-lg-7 col-sm-12">
                                 <div class="transacBarGraphBoxY"><canvas id="transacBarGraphYaxis"></canvas></div>
                             </div>
-                            <div class="col-lg-3 col-sm-12 g-1">
-                                <div class = "doughnutChartStatusBox py-4 "><canvas id="doughnutChartStatus"></canvas></div>
-                                <p><i class="paymentPosted fa-solid fa-circle px-4"></i> Payment Posted      (54)</p>
-                                <p><i class="paymentPending fa-solid fa-circle px-4""></i> Payment Pending    (20)</p>
-                                <p><i class="paymentFailed fa-solid fa-circle px-4""></i> Payment Failed      (26)</p>
+                            <div class="col-lg-3 col-sm-6 g-1">
+                                <div class = "doughnutChartStatusBox py-3 px-3 "><canvas id="doughnutChartStatus"></canvas></div>
+                            </div>
+                            <div class="col-lg-2 col-sm-6 g-1 py-5">
+                                <h6><strong>PAYMENT STATUS LIST : </strong></h6>
+                                <ul class="list-group">
+                                    <li class="list-group-item"><span class="badge text-bg-success">Successful</span> <small>: 54 Transactions</small></li>
+                                    <li class="list-group-item"><span class="badge text-bg-posted">Posted</span> <small>: 20 Transactions</small></li>
+                                    <li class="list-group-item"><span class="badge text-bg-pending">Pending</span> <small>: 26 Transactions</small></li>
+                                    <li class="list-group-item"><span class="badge text-bg-postingFailed">Posting Failed</span><small>:  21 Transactions</small></li>
+                                    <li class="list-group-item"><span class="badge text-bg-failed">Failed</span> <small>: 18 Transactions</small></li>
+                                </ul>
                             </div>
         
                         </div>
@@ -190,90 +187,30 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <script>
-
-        const polarAreaChart = document.getElementById('polarAreaChart');
-        new Chart(polarAreaChart, {
-            type: 'polarArea',
-            data: {
-                label: 'Income', 
-                datasets: [{
-                    data: ['25', '50', '75', '100', '125'],
-                    backgroundColor: ['#ACC9CA', '#EBBC02', '#87C159', '#FCE1A1', '#058240']
-                }]
-            }
-        });
-
-        const doughnutChart = document.getElementById('doughnutChart');
-        new Chart(doughnutChart, {
-            type: 'doughnut',
-            data: {
-                labels: ["24 HRS", "Total Transactions"],
-                datasets: [{
-                    data: [50, 125],
-                    backgroundColor: ['#ACC9CA', '#9CCF73']
-                }],
-            },
-            options: {
-                maintainAspectRatio: false,
-                tooltips: {
-                backgroundColor: "rgb(255,255,255)",
-                bodyFontColor: "#858796",
-                borderColor: '#dddfeb',
-                borderWidth: 2,
-                xPadding: 15,
-                yPadding: 15,
-                displayColors: false,
-                caretPadding: 10,
-                },
-                legend: {
-                display: false
-                },
-                cutoutPercentage: 80,
-            }
-        });
-
-        /* 
-         type: 'doughnut',
-            data: {
-                label: 'Income', 
-                datasets: [{
-                    data: ['25', '125'],
-                    backgroundColor: ['#ACC9CA', '#9CCF73']
-                }]
-            }
-        */
-
-        const transacBarGraph = document.getElementById('transacBarGraph');
-        new Chart(transacBarGraph, {
-            type: 'bar',
-            data: {
-                labels: ['US', 'RUSSIA', 'UKRAINE', 'INDIA'],
+        
+        // DATA
+        
+        const transacData = {
+                labels: ['US', 'RUSSIA', 'UKRAINE', 'INDIA', 'PAKISTAN', 'LONDON'],
                 datasets: [
                     {
                         label: 'No. of transactions this week',
-                        data: ['50', '10', '15', '26'],
+                        data: ['50', '10', '15', '26', '50', '10'],
                         backgroundColor: '#39C86A',
                         borderRadius: 5,
                         borderWidth: 1
                     },
                     {
                         label: 'No. of transaction last week',
-                        data: ['100', '20', '25', '36'],
+                        data: ['100', '20', '25', '36', '100', '20'],
                         backgroundColor: '#B8E6C8',
                         borderRadius: 5,
                         borderWidth: 1
                     }
                 ]
-            },
-            options: {
-                maintainAspectRatio: false
             }
-        });
 
-        const transacBarGraphYaxis = document.getElementById('transacBarGraphYaxis');
-        new Chart(transacBarGraphYaxis, {
-            type: 'bar',
-            data: {
+        const mopTransacData = {
                 labels: ['VISA', 'MasterCard', 'MLhuillier Pay', 'Gcash', 'Paymaya', 'Others', 'Others', 'Others'],
                 datasets: [{
                     axis: 'y',
@@ -283,14 +220,132 @@
                     backgroundColor: '#39C86A',
                     borderRadius: 5,
                     borderWidth: 1
+                    }]
+            }
+
+        const doughnutStatusData = {
+                labels: ["Successful", "Posted", "Pending", "Posting Failed", "Failed"], 
+                datasets: [{
+                data: [54, 20, 26, 21, 18],
+                backgroundColor: ['#139650', '#9CCF73', '#F6C23E', '#FEE3A2','#E74A3B']
                 }]
-            },
+            }
+        
+        window.addEventListener("load", (event) => { //ONLOAD
+            document.getElementById("weeklyButton").click();
+        });
+
+        const dailyReportButton = document.getElementById('dailyButton');
+        dailyReportButton.addEventListener('click',
+            function(){
+                const dailyReportChartData = {
+                    // const labels = Utils.months({count: 12});
+                    // hidden: true
+                    labels: ["8 AM", "9 AM", "10 AM", "11 AM", "12 PM", "1 PM", "2 PM", "3 PM", "4 PM", "5 PM"],
+                    datasets: [{
+                        label: 'The last 24 hours',
+                        data: [107, 96, 100, 98, 101, 100, 101, 101, 98, 98],
+                        fill: false,
+                        borderColor: '#ACC9CA',
+                    }]
+                }
+                initializeLineChart(dailyReportChartData);
+            }
+        );
+
+        const weeklyReportButton = document.getElementById('weeklyButton');
+        weeklyReportButton.addEventListener('click',
+            function(){
+                const weeklyData = {
+                    labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+                    datasets: [{
+                        label: 'The last week',
+                        data: [1338, 1329, 575, 638, 1058, 1246, 816],
+                        fill: false,
+                        borderColor: '#EBBC02'
+                    }]
+                }
+                initializeLineChart(weeklyData);
+            }
+        );
+
+        const monthlyReportButton = document.getElementById('monthlyButton');
+        monthlyReportButton.addEventListener('click',
+            function(){
+                const monthlyData = {
+                    labels: ["FEB 24", "FEB 25", "FEB 26", "FEB 27", "FEB 28", "MAR 1", "MAR 2"],
+                    datasets: [{
+                        label: 'The last month',
+                        data: [5218, 4706, 3537, 3654, 4595, 4614, 3676],
+                        fill: false,
+                        borderColor: '#87C159'
+                    }]
+                }  
+                initializeLineChart(monthlyData);
+            }
+        );
+
+        const halfMonthReportButton = document.getElementById('halfMonthButton');
+        halfMonthReportButton.addEventListener('click',
+            function(){
+                const halfMonthData = {
+                    labels: ["OCT 24", "NOV 25", "DEC 26", "JAN 27", "FEB 28", "MAR 1"],
+                    datasets: [{
+                        label: 'The last  6 months',
+                        data: [29203, 18164, 18403, 21722, 21554, 40954],
+                        fill: false,
+                        borderColor: '#FCE1A1'
+                    }]
+                } 
+                initializeLineChart(halfMonthData);
+            }
+        );
+
+        const yearlyReportButton = document.getElementById('yearlyButton');
+        yearlyReportButton.addEventListener('click',
+            function(){
+                const yearlyData = {
+                    labels: ["JAN", "FEB", "MAR", "JUN", "JUL", "AUG"],
+                    datasets: [{
+                        label: 'The whole year',
+                        data: [41590, 50869, 49114, 45972, 49804, 62651],
+                        fill: false,
+                        borderColor: '#058240'
+                    }]
+                } 
+                initializeLineChart(yearlyData);
+            }
+        );
+
+        function initializeLineChart(data){
+            const dailyReportChart = document.getElementById('dailyReportChart');
+            new Chart(dailyReportChart, {
+                type: 'line',
+                data: data
+            });
+        }
+
+        // CHARTS
+
+        const transacBarGraph = document.getElementById('transacBarGraph');
+        new Chart(transacBarGraph, {
+            type: 'bar',
+            data: transacData,
+            options: {
+                maintainAspectRatio: false
+            }
+        });
+
+        const mopBarGraph = document.getElementById('transacBarGraphYaxis');
+        new Chart(mopBarGraph, {
+            type: 'bar',
+            data: mopTransacData,
             options: {
                 maintainAspectRatio: false,
                 indexAxis: 'y',
                 scales: {
                     xAxes: [{
-                        barThickness: 20,  // number (pixels) or 'flex'
+                        barThickness: 20,
                     }]
                 }
             }
@@ -299,13 +354,7 @@
         const doughnutChartStatus = document.getElementById('doughnutChartStatus');
         new Chart(doughnutChartStatus, {
             type: 'doughnut',
-            data: {
-                labels: ["Posted", "Pending", "Failed"],
-                datasets: [{
-                data: [54, 20, 26],
-                backgroundColor: ['#139650', '#E74A3B', '#F6C23E']
-                }],
-            },
+            data: doughnutStatusData,
             options: {
                 tooltips: {
                 backgroundColor: "rgb(255,255,255)",
