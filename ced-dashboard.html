@@ -15,7 +15,7 @@
 
         <div class="row">
 
-            <div class="col-lg-8 col-sm-12"> <!--Divides Transaction Records and it's left side-->
+            <div class="col-lg-8"> <!--Divides Transaction Records and it's left side-->
                 <div class="row g-1"> <!--Upper Left Text-->
                     <div class="col-lg-6 col-sm-6 text-start fs-1 fw-bolder text-uppercase py-3 px-3">
                         <p><strong>welcome, user</strong></p>
@@ -27,7 +27,7 @@
                     </div>
                 </div>
                 <div class="row g-3"> <!--Triple Card Today Reports-->
-                    <div class="col-lg-4 col-sm-12 py-1">
+                    <div class="col-lg-4 py-1">
                         <div class="blrCard card border shadow">
                             <div class="card-body">
                                 <p class="card-title fs-5">Transactions Today</p>
@@ -35,7 +35,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-12 py-1">
+                    <div class="col-lg-4 py-1">
                         <div class="blrCard card border shadow">
                             <div class="card-body">
                               <p class="card-title fs-5">New Users Today</p>
@@ -43,7 +43,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-12 py-1">
+                    <div class="col-lg-4 py-1">
                         <div class="blrCard card border shadow">
                             <div class="card-body">
                               <p class="card-title fs-5">Total User</p>
@@ -54,29 +54,38 @@
                 </div>
 
                 <div class="row g-3"> <!--Daily Report Row-->
-                    <div class="col-sm-12 py-3">
+                    <div class="py-3">
 
                         <div class="blrCard card border shadow">
                             <div class="card-body">
                                 <div class="row"> 
-                                    <div class="col-lg-3 col-sm-12">
+                                    <div class="col-lg-3">
                                         <strong><p class="fs-1 fw-bolder text-uppercase">daily<br>report</p></strong>
                                         <p class="fw-semibold text-uppercase">financial record overview</p>
                                         <button type="button" class="btn btn-outline-success fw-bold">EXPORT <i class="exportButtonIcon fa fa-arrow-down"></i></button>
                                     </div>
-                                    <div class="col-lg-9 col-sm-12 g-1">
+                                    <div class="col-lg-9 g-1">
                                         <div class="row justify-content-center text-uppercase py-2">
-                                            <div class="col-lg-8 col-sm-12">
+                                            <div class="col-lg-8">
                                                 <div class="dailyReportChartBox"><canvas id="dailyReportChart"></canvas></div>
                                             </div>
                                             <div class="col-lg-4 col-sm-6 py-4">
                                                 <h6><strong>volume generated: </strong></h6>
+                                                <!--
                                                 <div class="list-group">
                                                     <button id="dailyButton" type="button" class="list-group-item list-group-item-action"><span class="badge text-bg-dailyText">24 HRS</span> <small>₱ 1,000</small></button>
                                                     <button id="weeklyButton" type="button" class="list-group-item list-group-item-action"><span class="badge text-bg-weeklyText">7 DAYS</span> <small>₱ 7,000</small></button>
                                                     <button id="monthlyButton" type="button" class="list-group-item list-group-item-action"><span class="badge text-bg-monthlyText">30 DYS</span> <small>₱ 30,000</small></button>
                                                     <button id="halfMonthButton" type="button" class="list-group-item list-group-item-action"><span class="badge text-bg-halfyearText">6 MOS.</span> <small>₱ 150,000</small></button>
                                                     <button id="yearlyButton" type="button" class="list-group-item list-group-item-action"><span class="badge text-bg-yearlyText">1 YEAR</span> <small>₱ 300,000</small></button>
+                                                </div>
+                                                -->
+                                                <div class="list-group">
+                                                    <button onclick="sortBy('dailyData')" type="button" class="list-group-item list-group-item-action"><span class="badge text-bg-dailyText">24 HRS</span> <small>₱ 1,000</small></button>
+                                                    <button onclick="sortBy('weeklyData')" type="button" class="list-group-item list-group-item-action"><span class="badge text-bg-weeklyText">7 DAYS</span> <small>₱ 7,000</small></button>
+                                                    <button onclick="sortBy('monthlyData')" type="button" class="list-group-item list-group-item-action"><span class="badge text-bg-monthlyText">30 DYS</span> <small>₱ 30,000</small></button>
+                                                    <button onclick="sortBy('halfMonthData')" type="button" class="list-group-item list-group-item-action"><span class="badge text-bg-halfyearText">6 MOS.</span> <small>₱ 150,000</small></button>
+                                                    <button onclick="sortBy('yearlyData')" type="button" class="list-group-item list-group-item-action"><span class="badge text-bg-yearlyText">1 YEAR</span> <small>₱ 300,000</small></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -90,7 +99,7 @@
 
             </div> 
 
-            <div class="col-lg-4 col-sm-12 h-100"> <!--Divides Transaction Records and it's left side-->
+            <div class="col-lg-4"> <!--Divides Transaction Records and it's left side-->
 
                 <div class="row g-3">
                     <div class="col py-3">
@@ -153,7 +162,7 @@
                         </div>
              
                         <div class="row">
-                            <div class="col-lg-7 col-sm-12">
+                            <div class="col-lg-7">
                                 <div class="transacBarGraphBoxY"><canvas id="transacBarGraphYaxis"></canvas></div>
                             </div>
                             <div class="col-lg-3 col-sm-6 g-1">
@@ -161,7 +170,7 @@
                             </div>
                             <div class="col-lg-2 col-sm-6 g-1 py-5">
                                 <h6><strong>PAYMENT STATUS LIST : </strong></h6>
-                                <ul class="list-group">
+                                <ul class="list-group"> <!--PLANNING TO PUT ON LINKS-->
                                     <li class="list-group-item"><span class="badge text-bg-success">Successful</span> <small>: 54 Transactions</small></li>
                                     <li class="list-group-item"><span class="badge text-bg-posted">Posted</span> <small>: 20 Transactions</small></li>
                                     <li class="list-group-item"><span class="badge text-bg-pending">Pending</span> <small>: 26 Transactions</small></li>
@@ -187,9 +196,220 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <script>
+        /* EVERYTHING BELOW IS BEFORE DAILY REPORT CHART
+        window.addEventListener("load", (event) => { //ONLOAD
+            document.getElementById("dailyButton").click();
+        });
+
+        // LINE CHART 
+        function initializeLineChart(lineData){
+            const dailyReportChart = document.getElementById('dailyReportChart');
+            new Chart(dailyReportChart, {
+                type: 'line',
+                data: lineData
+            });
+        }
+        // LINE CHART DATA
+        const dailyReportButton = document.getElementById('dailyButton');
+        dailyReportButton.addEventListener('click',
+            function(){
+                const dailyData = {
+                    labels: ["8 AM", "9 AM", "10 AM", "11 AM", "12 PM", "1 PM", "2 PM", "3 PM", "4 PM", "5 PM"],
+                    datasets: [{
+                        label: 'The last 24 hours',
+                        data: [107, 96, 100, 98, 101, 100, 101, 101, 98, 98],
+                        fill: false,
+                        borderColor: '#ACC9CA',
+                    }]
+                }
+                initializeLineChart(dailyData);
+            }
+        );
+        const weeklyReportButton = document.getElementById('weeklyButton');
+        weeklyReportButton.addEventListener('click',
+            function(){
+                const weeklyData = {
+                    labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+                    datasets: [{
+                        label: 'The last week',
+                        data: [1338, 1329, 575, 638, 1058, 1246, 816],
+                        fill: false,
+                        borderColor: '#EBBC02'
+                    }]
+                }
+                initializeLineChart(weeklyData);
+            }
+        );
+        const monthlyReportButton = document.getElementById('monthlyButton');
+        monthlyReportButton.addEventListener('click',
+            function(){
+                const monthlyData = {
+                    labels: ["FEB 24", "FEB 25", "FEB 26", "FEB 27", "FEB 28", "MAR 1", "MAR 2"],
+                    datasets: [{
+                        label: 'The last month',
+                        data: [5218, 4706, 3537, 3654, 4595, 4614, 3676],
+                        fill: false,
+                        borderColor: '#87C159'
+                    }]
+                }  
+                initializeLineChart(monthlyData);
+            }
+        );
+        const halfMonthReportButton = document.getElementById('halfMonthButton');
+        halfMonthReportButton.addEventListener('click',
+            function(){
+                const halfMonthData = {
+                    labels: ["OCT 24", "NOV 25", "DEC 26", "JAN 27", "FEB 28", "MAR 1"],
+                    datasets: [{
+                        label: 'The last  6 months',
+                        data: [29203, 18164, 18403, 21722, 21554, 40954],
+                        fill: false,
+                        borderColor: '#FCE1A1'
+                    }]
+                } 
+                initializeLineChart(halfMonthData);
+            }
+        );
+        const yearlyReportButton = document.getElementById('yearlyButton');
+        yearlyReportButton.addEventListener('click',
+            function(){
+                const yearlyData = {
+                    labels: ["JAN", "FEB", "MAR", "JUN", "JUL", "AUG"],
+                    datasets: [{
+                        label: 'The whole year',
+                        data: [41590, 50869, 49114, 45972, 49804, 62651],
+                        fill: false,
+                        borderColor: '#058240'
+                    }]
+                }
+                initializeLineChart(yearlyData);
+            }
+        );
+
+        I TRIED THIS: I ALSO TRIED PUTTING DATA= ACTUAL DATA SET FROM WEEKLY MONTHLY ETC.
+
+        function sortBy(range){
+            dailyReportChart.destroy();
+            if(range==='data'){
+                initializeLineChart = {
+                    type: 'line',
+                    data
+                };
+            }
+            if(range==='weeklyData'){
+                initializeLineChart = {
+                    type: 'line',
+                    weeklyData
+                };
+            }
+            if(range==='monthlyData'){
+                initializeLineChart = {
+                    type: 'line',
+                    monthlyData
+                };
+            }
+            if(range==='halfMonthData'){
+                initializeLineChart = {
+                    type: 'line',
+                    halfMonthData
+                };
+            }
+            if(range==='yearlyData'){
+                initializeLineChart = {
+                    type: 'line',
+                    yearlyData
+                };
+            }
+            InitializeDailyReportChart = new Chart(
+                document.getElementById('dailyReportChart'),
+                initializeLineChart
+            )
+        }
+                    TRIED TO PUT THIS IN IF STATEMENT
+                    InitializeDailyReportChart = new Chart(
+                    document.getElementById('dailyReportChart'),
+                    initializeLineChart
+                );
+        */
         
-        // DATA
+        // const dailyData weeklyData monthlyData etc not working for some weird reason
+        const data = {
+            labels: ['8 AM', '9 AM', '10 AM', '11 AM', '12 PM', '1 PM', '2 PM', '3 PM', '4 PM', '5 PM'],
+            datasets: [{
+                label: 'The last 24 hours',
+                data: [107, 96, 100, 98, 101, 100, 101, 101, 98, 98],
+                fill: false,
+                borderColor: '#ACC9CA'
+            }]
+        };
+        const weeklyData = {
+            labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+            datasets: [{
+                label: 'The last week',
+                data: [1338, 1329, 575, 638, 1058, 1246, 816],
+                fill: false,
+                borderColor: '#EBBC02'
+            }]
+        };
+        const monthlyData = {
+            labels: ["FEB 24", "FEB 25", "FEB 26", "FEB 27", "FEB 28", "MAR 1", "MAR 2"],
+            datasets: [{
+                label: 'The last month',
+                data: [5218, 4706, 3537, 3654, 4595, 4614, 3676],
+                fill: false,
+                borderColor: '#87C159'
+            }]
+        };
+        const halfMonthData = {
+            labels: ["OCT 24", "NOV 25", "DEC 26", "JAN 27", "FEB 28", "MAR 1"],
+            datasets: [{
+                label: 'The last  6 months',
+                data: [29203, 18164, 18403, 21722, 21554, 40954],
+                fill: false,
+                borderColor: '#FCE1A1'
+            }]
+        };
+        const yearlyData = {
+            labels: ["JAN", "FEB", "MAR", "JUN", "JUL", "AUG"],
+            datasets: [{
+                label: 'The whole year',
+                data: [41590, 50869, 49114, 45972, 49804, 62651],
+                fill: false,
+                borderColor: '#058240'
+            }]
+        };
+
+        const initializeLineChart = { // substitute to config in tutorial
+            type: 'line',
+            data
+        };
+
+        const InitializeDailyReportChart = new Chart( // initializing chart
+            document.getElementById('dailyReportChart'),
+            initializeLineChart
+        );
+
+        function sortBy(range){
+            dailyReportChart.destroy();
+            if(range==='dailyData'){
+            }
+            if(range==='weeklyData'){
+            }
+            if(range==='monthlyData'){
+            }
+            if(range==='halfMonthData'){
+            }
+            if(range==='yearlyData'){
+            }
+        }
+
+
+
+
+
+
         
+        // TRANSAC BAR DATA
         const transacData = {
                 labels: ['US', 'RUSSIA', 'UKRAINE', 'INDIA', 'PAKISTAN', 'LONDON'],
                 datasets: [
@@ -209,124 +429,7 @@
                     }
                 ]
             }
-
-        const mopTransacData = {
-                labels: ['VISA', 'MasterCard', 'MLhuillier Pay', 'Gcash', 'Paymaya', 'Others', 'Others', 'Others'],
-                datasets: [{
-                    axis: 'y',
-                    label: 'No. of transactions',
-                    data: ['149', '99', '79', '65', '25', '20', '15', '10'],
-                    fill: false,
-                    backgroundColor: '#39C86A',
-                    borderRadius: 5,
-                    borderWidth: 1
-                    }]
-            }
-
-        const doughnutStatusData = {
-                labels: ["Successful", "Posted", "Pending", "Posting Failed", "Failed"], 
-                datasets: [{
-                data: [54, 20, 26, 21, 18],
-                backgroundColor: ['#139650', '#9CCF73', '#F6C23E', '#FEE3A2','#E74A3B']
-                }]
-            }
-        
-        window.addEventListener("load", (event) => { //ONLOAD
-            document.getElementById("weeklyButton").click();
-        });
-
-        const dailyReportButton = document.getElementById('dailyButton');
-        dailyReportButton.addEventListener('click',
-            function(){
-                const dailyReportChartData = {
-                    // const labels = Utils.months({count: 12});
-                    // hidden: true
-                    labels: ["8 AM", "9 AM", "10 AM", "11 AM", "12 PM", "1 PM", "2 PM", "3 PM", "4 PM", "5 PM"],
-                    datasets: [{
-                        label: 'The last 24 hours',
-                        data: [107, 96, 100, 98, 101, 100, 101, 101, 98, 98],
-                        fill: false,
-                        borderColor: '#ACC9CA',
-                    }]
-                }
-                initializeLineChart(dailyReportChartData);
-            }
-        );
-
-        const weeklyReportButton = document.getElementById('weeklyButton');
-        weeklyReportButton.addEventListener('click',
-            function(){
-                const weeklyData = {
-                    labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-                    datasets: [{
-                        label: 'The last week',
-                        data: [1338, 1329, 575, 638, 1058, 1246, 816],
-                        fill: false,
-                        borderColor: '#EBBC02'
-                    }]
-                }
-                initializeLineChart(weeklyData);
-            }
-        );
-
-        const monthlyReportButton = document.getElementById('monthlyButton');
-        monthlyReportButton.addEventListener('click',
-            function(){
-                const monthlyData = {
-                    labels: ["FEB 24", "FEB 25", "FEB 26", "FEB 27", "FEB 28", "MAR 1", "MAR 2"],
-                    datasets: [{
-                        label: 'The last month',
-                        data: [5218, 4706, 3537, 3654, 4595, 4614, 3676],
-                        fill: false,
-                        borderColor: '#87C159'
-                    }]
-                }  
-                initializeLineChart(monthlyData);
-            }
-        );
-
-        const halfMonthReportButton = document.getElementById('halfMonthButton');
-        halfMonthReportButton.addEventListener('click',
-            function(){
-                const halfMonthData = {
-                    labels: ["OCT 24", "NOV 25", "DEC 26", "JAN 27", "FEB 28", "MAR 1"],
-                    datasets: [{
-                        label: 'The last  6 months',
-                        data: [29203, 18164, 18403, 21722, 21554, 40954],
-                        fill: false,
-                        borderColor: '#FCE1A1'
-                    }]
-                } 
-                initializeLineChart(halfMonthData);
-            }
-        );
-
-        const yearlyReportButton = document.getElementById('yearlyButton');
-        yearlyReportButton.addEventListener('click',
-            function(){
-                const yearlyData = {
-                    labels: ["JAN", "FEB", "MAR", "JUN", "JUL", "AUG"],
-                    datasets: [{
-                        label: 'The whole year',
-                        data: [41590, 50869, 49114, 45972, 49804, 62651],
-                        fill: false,
-                        borderColor: '#058240'
-                    }]
-                } 
-                initializeLineChart(yearlyData);
-            }
-        );
-
-        function initializeLineChart(data){
-            const dailyReportChart = document.getElementById('dailyReportChart');
-            new Chart(dailyReportChart, {
-                type: 'line',
-                data: data
-            });
-        }
-
-        // CHARTS
-
+        // TRANSAC BAR CHART
         const transacBarGraph = document.getElementById('transacBarGraph');
         new Chart(transacBarGraph, {
             type: 'bar',
@@ -335,7 +438,21 @@
                 maintainAspectRatio: false
             }
         });
-
+        
+        // MOP BAR GRAPH DATA
+        const mopTransacData = {
+                labels: ['VISA', 'MasterCard', 'MLhuillier Pay', 'Gcash', 'Paymaya', 'Others', 'Others', 'Others'],
+                datasets: [{
+                    axis: 'y',
+                    label: 'No. of transactions',
+                    data: ['149', '99', '79', '65', '25', '20', '15', '10', ],
+                    fill: false,
+                    backgroundColor: '#39C86A',
+                    borderRadius: 5,
+                    borderWidth: 1
+                    }]
+            }
+        // MOP BAR GRAPH
         const mopBarGraph = document.getElementById('transacBarGraphYaxis');
         new Chart(mopBarGraph, {
             type: 'bar',
@@ -351,6 +468,15 @@
             }
         });
 
+        // DOUGHNUT CHART DATA
+        const doughnutStatusData = {
+                labels: ["Successful", "Posted", "Pending", "Posting Failed", "Failed"], 
+                datasets: [{
+                data: [54, 20, 26, 21, 18],
+                backgroundColor: ['#139650', '#9CCF73', '#F6C23E', '#FEE3A2','#E74A3B']
+                }]
+            }
+        // DOUGHNUT CHART
         const doughnutChartStatus = document.getElementById('doughnutChartStatus');
         new Chart(doughnutChartStatus, {
             type: 'doughnut',
@@ -372,7 +498,7 @@
                 cutoutPercentage: 80,
             }
         });
-
+        
     </script>
 
 </body>
