@@ -21,6 +21,7 @@ body {
     background: #fff;
     margin: 5px;
     border-radius: 5px;
+    --bs-border-width: 0px;
   }
 .blrCard::after {
     content: "";
@@ -128,9 +129,9 @@ body {
 }
 
 .transacBarGraphBox{
-    height: calc(100vh - 26.7em);
+    height: 27.2rem;
 }
 
 .transacBarGraphBoxY{
-    height: calc(100vh - 30em);
+    height: 27.2rem;
 }
