@@ -28,10 +28,10 @@
                     <div class="row mt-4"> <!--Upper Text-->
                         <div class="col-lg-8">
                             <div class="row">
-                                <div class="col text-start fw-bolder text-uppercase">
+                                <div class="col col-xs-6 text-start fw-bolder text-uppercase">
                                     <p class="fs-2">welcome, user</p>
                                 </div>
-                                <div class="col text-end fw-bold text-uppercase">
+                                <div class="col col-xs-6 text-end fw-bold text-uppercase">
                                     <p class="fs-5">wed, mar 8 2023<br>12:00:00 pm
                                     </p>
                                 </div>
@@ -45,8 +45,8 @@
                                     <div class="card border shadow">
                                         <div class="card-body">
                                             <div class="row">
-                                                <div class="col"><h5>Filter by: </h5></div>
-                                                <div class="col text-start">
+                                                <div class="col-xl-3 col-6"><p class="fw-bold mt-1">Filter by: </p></div>
+                                                <div class="col-xl-3 col-6 text-start">
                                                     <div class="dropdown">
                                                         <button class="btn btn-secondary dropdown-toggle dateRangeButton" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                         Daily
@@ -59,8 +59,8 @@
                                                         </ul>
                                                     </div>
                                                 </div>
-                                                <div class="col"><h5>Refresh: </h5></div>
-                                                <div class="col text-start">
+                                                <div class="col-xl-3 col-6"><p class="fw-bold mt-1">Refresh: </p></div>
+                                                <div class="col-xl-3 col-6 text-start">
                                                     <button type="button" class="btn btn-secondary refreshButton"><i class="fa-solid fa-arrows-rotate refreshIcon"></i></button>
                                                 </div>
                                             </div>
@@ -73,7 +73,7 @@
                     <div class="col-lg-8"> <!--Divides Transaction Records and it's left side-->
                         
                         <div class="row py-2"> <!--Triple Card Today Reports-->
-                            <div class="col-lg-4 py-2">
+                            <div class="col-xl-4 py-2">
                                 <div class="blrCard card border shadow">
                                     <div class="card-body">
                                       <p class="card-title fw-bold">Total Transactions</p>
@@ -84,7 +84,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 py-2">
+                            <div class="col-xl-4 py-2">
                                 <div class="blrCard card border shadow">
                                     <div class="card-body">
                                         <p class="card-title fw-bold">Total Merchants</p>
@@ -95,7 +95,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 py-2">
+                            <div class="col-xl-4 py-2">
                                 <div class="blrCard card border shadow">
                                     <div class="card-body">
                                         <p class="card-title fw-bold">Total Agents</p>
@@ -120,19 +120,19 @@
                                         </div>
         
                                         <div class="row">
-                                            <div class="col-lg-4">
-                                                <div class="merchantPolarAreaChartBox"><canvas id="merchantPolarAreaChart"></canvas></div>
+                                            <div class="col-xl-4 col-12">
+                                                <div class="doughnutChartMerchantBox"><canvas id="doughnutChartMerchant"></canvas></div>
                                             </div>
-                                            <div class="col-lg-4">
-                                                <ul class="list-group"> <!--PLANNING TO PUT ON LINKS-->
-                                                    <li class="list-group-item"><span class="badge text-bg-merchant1">SOBRE</span><small> : ₱ 1,005</small></li>
-                                                    <li class="list-group-item"><span class="badge text-bg-merchant2">AltPayNet Corp. II</span><small> : ₱ 797</small></li>
-                                                    <li class="list-group-item"><span class="badge text-bg-merchant3">Dummy</span> <small> : ₱ 1,000</small></li>
-                                                    <li class="list-group-item"><span class="badge text-bg-merchant4">Test Merchant</span><small> : ₱ 415</small></li>
-                                                    <li class="list-group-item"><span class="badge text-bg-merchant5">SSS Merchant</span><small> : ₱ 637</small></li>
+                                            <div class="col-xl-4 col-12 py-2">
+                                                <ul class="list-group list-group-flush fw-bold">
+                                                    <li class="list-group-item"><span class="badge text-bg-merchant1">SOBRE</span><small> : ₱ 1,005,000</small></li>
+                                                    <li class="list-group-item"><span class="badge text-bg-merchant2">AltPayNet Corp. II</span><small> : ₱ 797,000</small></li>
+                                                    <li class="list-group-item"><span class="badge text-bg-merchant3">Dummy</span><small> : ₱ 1,000,000</small></li>
+                                                    <li class="list-group-item"><span class="badge text-bg-merchant4">Test Merchant</span><small> : ₱ 415,000</small></li>
+                                                    <li class="list-group-item"><span class="badge text-bg-merchant5">SSS Merchant</span><small> : ₱ 637,000</small></li>
                                                 </ul>
                                             </div>
-                                            <div class="col-lg-4">
+                                            <div class="col-xl-4 col-12 py-2">
                                                 <div class="doughnutChartTotalBox"><canvas id="doughnutChartTotal"></canvas></div>
                                             </div>
                                         </div>
@@ -203,17 +203,17 @@
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-lg-6 col-sm-6">
-                                        <ul class="list-group"> <!--PLANNING TO PUT ON LINKS-->
-                                            <li class="list-group-item"><span class="badge text-bg-success">Successful</span><small>: 54 Transactions</small></li>
-                                            <li class="list-group-item"><span class="badge text-bg-posted">Posted</span><small> : 20 Transactions</small></li>
-                                            <li class="list-group-item"><span class="badge text-bg-pending">Pending</span> <small> : 26 Transactions</small></li>
-                                            <li class="list-group-item"><span class="badge text-bg-postingFailed">Posting Failed</span><small> : 21 Transactions</small></li>
-                                            <li class="list-group-item"><span class="badge text-bg-failed">Failed</span><small> : 18 Transactions</small></li>
+                                    <div class="col-xl-6 col-6">
+                                        <ul class="list-group list paymentStatusList"> <!--PLANNING TO PUT ON LINKS-->
+                                            <li class="list-group-item"><span class="badge text-bg-success">Successful</span><small><a href="#" class="text-decoration-none text-reset"> : 54 Transactions</a></small></li>
+                                            <li class="list-group-item"><span class="badge text-bg-posted">Posted</span><small><a href="#" class="text-decoration-none text-reset"> : 20 Transactions</a></small></li>
+                                            <li class="list-group-item"><span class="badge text-bg-pending">Pending</span><small><a href="#" class="text-decoration-none text-reset"> : 26 Transactions</a></small></li>
+                                            <li class="list-group-item"><span class="badge text-bg-postingFailed">Posting Failed</span><small><a href="#" class="text-decoration-none text-reset"> : 21 Transactions</a></small></li>
+                                            <li class="list-group-item"><span class="badge text-bg-failed">Failed</span><small><a href="#" class="text-decoration-none text-reset"> : 18 Transactions</a></small></li>
                                         </ul>
                                         
                                     </div>
-                                    <div class="col-lg-6 col-sm-6">
+                                    <div class="col-xl-6 col-6">
                                         <div class = "doughnutChartStatusBox"><canvas id="doughnutChartStatus"></canvas></div>
                                     </div>
                                 </div>
@@ -237,25 +237,25 @@
     <script>
 
         //
-        const polarChartData = {
-                labels: [],
-                datasets: [{
-                    label: 'Volume in peso: ',
-                    data: ['1005', '797', '1000', '415', '637'],
-                    fill: false,
-                    backgroundColor: ['#058240', '#87C159', '#ADCACB', '#FEE3A2', '#F3C301'],
-                    borderRadius: 5,
-                    borderWidth: 1
-                    }]
-            }
-        
-        const merchantPolarAreaChart = document.getElementById('merchantPolarAreaChart');
-        new Chart(merchantPolarAreaChart, {
-            type: 'polarArea',
-            data: polarChartData,
-            options: {
-                responsive: true
-            }
+        var doughnutChartMerchantData = {
+        labels: [],
+        datasets: [
+            {
+            label: 'Volume in peso: ',
+            data: ['1005000', '797000', '1000000', '415000', '637000'],
+            backgroundColor: ['#058240', '#87C159', '#ADCACB', '#FEE3A2', '#F3C301'],
+            }]
+        };
+
+        const doughnutChartMerchant = new Chart(document.getElementById('doughnutChartMerchant'), {
+        type: 'doughnut',
+        data: doughnutChartMerchantData,
+        options: {
+            responsive: true,
+            legend: {
+            display: false
+            },
+        }
         });
 
         // 
@@ -281,18 +281,18 @@
 
         // TRANSAC BAR DATA
         const transacData = {
-                labels: ['US', 'RUSSIA', 'UKRAINE', 'INDIA', 'PAKISTAN', 'LONDON'],
+                labels: ['US', 'RUSSIA', 'UKRAINE', 'INDIA', 'PAKISTAN'],
                 datasets: [
                     {
                         label: 'No. of transactions this week',
-                        data: ['50', '10', '15', '26', '50', '10'],
+                        data: ['50', '10', '15', '26', '50'],
                         backgroundColor: '#39C86A',
                         borderRadius: 5,
                         borderWidth: 1
                     },
                     {
                         label: 'No. of transaction last week',
-                        data: ['100', '20', '25', '36', '100', '20'],
+                        data: ['100', '20', '25', '36', '100'],
                         backgroundColor: '#B8E6C8',
                         borderRadius: 5,
                         borderWidth: 1

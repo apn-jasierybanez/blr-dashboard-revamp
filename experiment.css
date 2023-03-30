@@ -118,3 +118,19 @@ body {
 .blrCardNumber{
     margin-bottom: -5px;
 }
+
+.smallText{
+    padding-left: 5px;
+}
+
+.paymentStatusList{
+    padding-top: 10px;
+}
+
+.transacBarGraphBox{
+    height: calc(100vh - 26.7em);
+}
+
+.transacBarGraphBoxY{
+    height: calc(100vh - 30em);
+}
